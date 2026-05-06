@@ -3,212 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StadiumAI - Smart Crowd Management</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>StadiumAI | Smart Crowd Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-futbol"></i>
-                <span>StadiumAI</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#demo">Live Demo</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+        <div class="logo">Stadium<span>AI</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#live">Live Status</a></li>
+        </ul>
+        <a href="#contact" class="btn-contact">Support</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>AI-Powered Stadium Security</h1>
-            <p>Real-time crowd management with intelligent exit routing and security monitoring</p>
-            <div class="hero-buttons">
-                <a href="#demo" class="btn btn-primary">Live Demo</a>
-                <a href="#features" class="btn btn-secondary">Features</a>
-            </div>
+    <header class="hero">
+        <h1>AI-Powered Stadium Security</h1>
+        <p>Intelligent routing and real-time density monitoring for a safer experience.</p>
+        <div class="hero-btns">
+            <a href="#live" class="btn-primary">View Live Gates</a>
         </div>
-        <div class="hero-animation">
-            <div class="crowd-flow">
-                <div class="person"></div>
-                <div class="person"></div>
-                <div class="person"></div>
+    </header>
+
+    <section id="live" class="status-section">
+        <h2 class="section-title">Live Gate Density</h2>
+        <div class="gate-grid">
+            <!-- Dynamic Gate Cards -->
+            <div class="gate-card safe">
+                <span class="gate-label">Gate 1</span>
+                <div class="status-indicator">Clear</div>
+                <p>Recommend for entry.</p>
+            </div>
+            <div class="gate-card alert">
+                <span class="gate-label">Gate 2</span>
+                <div class="status-indicator">Overcrowded</div>
+                <p>Redirecting to Gate 1/3.</p>
+            </div>
+            <div class="gate-card safe">
+                <span class="gate-label">Gate 3</span>
+                <div class="status-indicator">Clear</div>
+                <p>Flow: Normal</p>
+            </div>
+            <div class="gate-card warning">
+                <span class="gate-label">Gate 4</span>
+                <div class="status-indicator">Moderate</div>
+                <p>Increasing traffic.</p>
+            </div>
+            <div class="gate-card safe">
+                <span class="gate-label">Gate 5</span>
+                <div class="status-indicator">Clear</div>
+                <p>Flow: Normal</p>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Smart Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Real-time Crowd Monitoring</h3>
-                    <p>AI analyzes crowd density at all exits and entry points in real-time</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-route"></i>
-                    </div>
-                    <h3>Intelligent Exit Routing</h3>
-                    <p>Automatically redirects crowds to less congested exits</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Security Alerts</h3>
-                    <p>Detects unusual behavior and suspicious activities instantly</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Live Analytics</h3>
-                    <p>Real-time dashboards with crowd flow predictions</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile Alerts</h3>
-                    <p>Instant notifications to security team via mobile app</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-broadcast-tower"></i>
-                    </div>
-                    <h3>Digital Signage</h3>
-                    <p>Updates stadium screens with real-time exit directions</p>
-                </div>
+    <section id="features" class="features-section">
+        <h2 class="section-title">System Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Crowd Monitoring</h3>
+                <p>Real-time density analysis at all points.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-route"></i>
+                <h3>Smart Routing</h3>
+                <p>Automated redirection to empty gates.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Security Alerts</h3>
+                <p>Instant detection of unusual activity.</p>
             </div>
         </div>
     </section>
-
-    <!-- Live Demo Section -->
-    <section id="demo" class="demo">
-        <div class="container">
-            <h2>Live Crowd Management Demo</h2>
-            <div class="demo-container">
-                <div class="stadium-map">
-                    <canvas id="stadiumCanvas" width="800" height="500"></canvas>
-                </div>
-                <div class="demo-controls">
-                    <div class="control-panel">
-                        <h3>Current Status</h3>
-                        <div class="status-grid">
-                            <div class="status-item">
-                                <span>Exit A:</span>
-                                <div class="status-bar high">85%</div>
-                            </div>
-                            <div class="status-item">
-                                <span>Exit B:</span>
-                                <div class="status-bar low">25%</div>
-                            </div>
-                            <div class="status-item">
-                                <span>Exit C:</span>
-                                <div class="status-bar medium">60%</div>
-                            </div>
-                        </div>
-                        <div class="alerts">
-                            <div class="alert critical">
-                                <i class="fas fa-exclamation-triangle"></i>
-                                Exit A: Overcrowded - Redirecting to Exit B
-                            </div>
-                        </div>
-                        <button class="btn btn-primary" onclick="simulateCrowd()">Simulate Crowd Flow</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>How It Works</h2>
-                    <p>Our AI system uses computer vision and machine learning to monitor crowd density across the entire stadium. When an exit becomes overcrowded, the system instantly calculates optimal rerouting paths and communicates with security teams and digital signage.</p>
-                    <div class="workflow">
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <h4>Monitor</h4>
-                            <p>24/7 camera surveillance</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <h4>Analyze</h4>
-                            <p>AI processes crowd data</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <h4>React</h4>
-                            <p>Instant rerouting decisions</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Ready to secure your stadium?</h3>
-                    <p>Contact us for a free demo and consultation</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@stadiumai.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-futbol"></i>
-                    <span>StadiumAI</span>
-                </div>
-                <p>&copy; 2024 StadiumAI. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
